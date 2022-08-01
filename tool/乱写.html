@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>「ブラウザメモ帳」</title>
+</head>
+
+<body>
+
+<input type="text"  size="50" id='input1'>
+（１）
+<br>
+<textarea rows="12" cols="110" id='textarea1'></textarea>
+<br><br>
+<input type="text"  size="50" id='input2'>
+（２）
+<br>
+<textarea rows="12" cols="110" id='textarea2'></textarea>
+<br><br>
+<input type="text"  size="50" id='input3'>
+（３）
+<br>
+<textarea rows="12" cols="110" id='textarea3'></textarea>
+<br><br>
+<input type="text"  size="50" id='input4'>
+（４）
+<br>
+<textarea rows="12" cols="110" id='textarea4'></textarea>
+<br><br>
+<input type="text"  size="50" id='input5'>
+（５）
+<br>
+<textarea rows="12" cols="110" id='textarea5'></textarea>
+<br><br>
+<input type="text"  size="50" id='input6'>
+（６）
+<br>
+<textarea rows="12" cols="110" id='textarea6'></textarea>
+<br><br>
+<input type="text"  size="50" id='input7'>
+（７）
+<br>
+<textarea rows="12" cols="110" id='textarea7'></textarea>
+<br><br>
+<input type="text"  size="50" id='input8'>
+（８）
+<br>
+<textarea rows="12" cols="110" id='textarea8'></textarea>
+<br><br>
+<input type="text"  size="50" id='input9'>
+（９）
+<br>
+<textarea rows="12" cols="110" id='textarea9'></textarea>
+<br><br>
+<input type="text"  size="50" id='input10'>
+（１０）
+<br>
+<textarea rows="12" cols="110" id='textarea10'></textarea>
+<script>
+document.querySelectorAll('input').forEach((el)=>{
+    let v=localStorage.getItem(el.id)
+    if(v) el.value=v
+})
+document.querySelectorAll('textarea').forEach((el)=>{
+    let v=localStorage.getItem(el.id)
+    if(v) el.value=v
+})
+document.body.addEventListener('change',(e)=>{
+    let element=e.target
+    localStorage.setItem(element.id,element.value)
+})
+</script>
+</body>
+</html>
